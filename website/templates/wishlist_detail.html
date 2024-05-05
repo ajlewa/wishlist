@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if wishes %}
+        <ul>
+            {% for wish in wishes %}
+                <li>{{wish.name}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

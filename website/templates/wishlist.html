@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if categories %}
+    <ul>
+        {% for c in categories %}
+            <li><a style="background: {{c.color}}" href="{% url "wishlist_detail" username=user.username category_id=c.id %}">{{c.name}}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}
